@@ -1,0 +1,356 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #FFF6F0;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #2C0735;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav a {
+  margin-left: 20px;
+  font-weight: 600;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #FF4C98;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #FF6E7F, #BFE9FF);
+  color: #2C0735;
+}
+
+.hero-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(to right, #FF6E7F, #BFE9FF);
+  color: #2C0735;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #FF4C98, #BFE9FF);
+  transform: scale(1.05);
+}
+
+/* About + Internship Side-by-Side */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background-color: #1E293B;
+  gap: 30px;
+}
+
+.about-text, .internship-section {
+  flex: 1 1 45%;
+  background-color: #0F172A;
+  padding: 20px;
+  border-radius: 15px;
+  color: #F1F5F9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.about-text h2, .internship-section h2 {
+  color: #06B6D4;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.about-text p, .internship-section p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.internship-card {
+  background-color: #1E293B;
+  border-left: 6px solid #F472B6;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.internship-card:hover {
+  transform: translateY(-5px);
+  background-color: #1c2635;
+}
+
+.internship-card h3 {
+  margin-bottom: 10px;
+  color: #F472B6;
+}
+
+.internship-card p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about-text, .internship-section {
+    flex: 1 1 100%;
+  }
+}
+
+
+.about-text, .about-photo {
+  flex: 1 1 400px;
+  margin: 20px;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#projects {
+  padding: 60px 10%;
+  background-color: #F0E6F6;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #2C0735;
+}
+
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin: 10px;
+}
+
+.project-video {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin: 10px;
+}
+
+.project-desc {
+  flex: 1 1 400px;
+  margin: 10px;
+}
+
+.project-desc h3 {
+  margin-bottom: 10px;
+  color: #FF4C98;
+}
+
+.project-desc p {
+  margin-bottom: 10px;
+}
+
+#skills {
+  padding: 60px 10%;
+  background: linear-gradient(to right, #7F00FF, #E100FF);
+  color: #fff;
+}
+
+#skills h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.skills-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.skill-card {
+  background-color: #fff;
+  color: #2C0735;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  background-color: #FF4C98;
+  color: #fff;
+}
+
+.skill-card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #FF4C98;
+}
+
+#contact {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #2C0735;
+}
+
+.contact-links a {
+  margin: 0 15px;
+  font-size: 2rem;
+  color: #2C0735;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #FF4C98;
+  transform: scale(1.2);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2C0735;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: linear-gradient(to right, #1c1c1c, #292929);
+  color: #fff;
+}
+
+.dark-mode header {
+  background-color: #121212;
+}
+
+.dark-mode header nav a:hover {
+  color: #FF4C98;
+}
+
+.dark-mode .btn {
+  background: linear-gradient(to right, #FF6E7F, #BFE9FF);
+  color: #121212;
+}
+
+.dark-mode .btn:hover {
+  background: linear-gradient(to right, #FF4C98, #BFE9FF);
+}
+
+.dark-mode .skill-card {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #skills {
+  background: linear-gradient(to right, #4e4e4e, #5c5c5c);
+}
+
+.dark-mode footer {
+  background-color: #121212;
+}
+
+.dark-mode .contact-links a {
+  color: #FF4C98;
+}
+
+.dark-mode .contact-links a:hover {
+  color: #FF6E7F;
+}
+
+/* Scroll Animation */
+.project-row, .skill-card, .about-photo img {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
